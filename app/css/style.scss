@@ -55,15 +55,15 @@ textarea {
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-  
+
   background-color: #ffffff;
 }
 
 // Header
 .header {
   position: relative;
-  z-index: 1;
-  padding-top: 70px;
+  z-index: 3;
+  padding-top: 220px;
 }
 
 // Logo
@@ -154,32 +154,28 @@ textarea {
 // Hero
 .hero {
   position: relative;
-  z-index: 1;
-
-  padding: 40px 0 100px;
-
-  overflow: hidden;
+  padding: 45px 0 0px;
 
   &__inner {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-
-    min-height: 700px;
   }
 
   &__content {
     position: relative;
     z-index: 2;
 
-    width: 40%;
-    max-width: 460px;
+    flex: 0 0 424px;
+    width: 424px;
   }
 
   &__title {
+    width: 424px;
+
     margin: 0;
 
-    font-size: 54px;
+    font-size: 46px;
     font-weight: 800;
     line-height: 1.05;
 
@@ -205,6 +201,7 @@ textarea {
     z-index: 1;
 
     width: 58%;
+    transform: translateY(-250px);
   }
 
   &__image {

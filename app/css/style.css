@@ -47,8 +47,8 @@ textarea {
 
 .header {
   position: relative;
-  z-index: 1;
-  padding-top: 70px;
+  z-index: 3;
+  padding-top: 220px;
 }
 
 .logo {
@@ -106,25 +106,23 @@ textarea {
 
 .hero {
   position: relative;
-  z-index: 1;
-  padding: 40px 0 100px;
-  overflow: hidden;
+  padding: 45px 0 0px;
 }
 .hero__inner {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  min-height: 700px;
 }
 .hero__content {
   position: relative;
   z-index: 2;
-  width: 40%;
-  max-width: 460px;
+  flex: 0 0 424px;
+  width: 424px;
 }
 .hero__title {
+  width: 424px;
   margin: 0;
-  font-size: 54px;
+  font-size: 46px;
   font-weight: 800;
   line-height: 1.05;
   text-transform: uppercase;
@@ -143,6 +141,7 @@ textarea {
   position: relative;
   z-index: 1;
   width: 58%;
+  transform: translateY(-250px);
 }
 .hero__image {
   width: 100%;
