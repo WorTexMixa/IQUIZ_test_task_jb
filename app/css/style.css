@@ -105,6 +105,17 @@ textarea {
   border-radius: 20px;
   background-color: #ffc1d5;
 }
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -18px;
+  width: 100%;
+  height: 4px;
+  background-image: linear-gradient(to right, #191919 50%, transparent 50%);
+  background-size: 16px 4px;
+  background-repeat: repeat-x;
+}
 .section-title--left {
   margin: 0;
 }
@@ -181,6 +192,17 @@ textarea {
   min-height: 1080px;
   padding: 190px 0 120px;
   overflow: hidden;
+}
+.how-it-works::after {
+  content: "";
+  position: absolute;
+  right: -180px;
+  bottom: -170px;
+  width: 650px;
+  height: 650px;
+  border-radius: 50%;
+  background-color: #faf6ff;
+  z-index: -1;
 }
 .how-it-works__decoration {
   position: absolute;

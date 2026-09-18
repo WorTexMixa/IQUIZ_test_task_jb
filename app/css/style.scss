@@ -146,6 +146,21 @@ textarea {
     background-color: #ffc1d5;
   }
 
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -18px;
+
+    width: 100%;
+    height: 4px;
+
+    background-image: linear-gradient(to right, $black 50%, transparent 50%);
+    background-size: 16px 4px;
+    background-repeat: repeat-x;
+  }
+
   &--left {
     margin: 0;
   }
@@ -254,6 +269,22 @@ textarea {
   padding: 190px 0 120px;
 
   overflow: hidden;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    right: -180px;
+    bottom: -170px;
+
+    width: 650px;
+    height: 650px;
+
+    border-radius: 50%;
+    background-color: #faf6ff;
+
+    z-index: -1;
+  }
 
   &__decoration {
     position: absolute;
