@@ -1,0 +1,150 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #191919;
+  background-color: #ffffff;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.intro {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.header {
+  position: relative;
+  z-index: 1;
+  padding-top: 70px;
+}
+
+.logo {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 56px;
+  padding: 0 24px 0 32px;
+  background-color: #191919;
+  border-radius: 40px;
+}
+.logo__rocket {
+  position: absolute;
+  left: -18px;
+  top: 50%;
+  width: 62px;
+  transform: translateY(-50%);
+  animation: logo-rocket 0.3s ease-in-out infinite alternate;
+}
+.logo__text {
+  position: relative;
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1;
+  color: #ffffff;
+}
+
+@keyframes logo-rocket {
+  from {
+    transform: translate(0, -50%);
+  }
+  to {
+    transform: translate(5px, calc(-50% - 5px));
+  }
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 0 32px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #e83f79;
+  border-radius: 6px;
+  box-shadow: 0 12px 24px rgba(232, 63, 121, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.button:hover {
+  background-color: #d9346d;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(232, 63, 121, 0.4);
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+  padding: 40px 0 100px;
+  overflow: hidden;
+}
+.hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 700px;
+}
+.hero__content {
+  position: relative;
+  z-index: 2;
+  width: 40%;
+  max-width: 460px;
+}
+.hero__title {
+  margin: 0;
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+.hero__text {
+  max-width: 390px;
+  margin: 32px 0 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.hero__button {
+  margin-top: 32px;
+}
+.hero__visual {
+  position: relative;
+  z-index: 1;
+  width: 58%;
+}
+.hero__image {
+  width: 100%;
+  height: auto;
+}/*# sourceMappingURL=style.css.map */

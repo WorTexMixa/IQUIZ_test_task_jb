@@ -1,0 +1,226 @@
+// Variables
+$font-main: "Montserrat", sans-serif;
+
+$text-color: #191919;
+$white: #ffffff;
+$black: #191919;
+
+// Reset  Base
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  font-family: $font-main;
+  color: $text-color;
+
+  background-color: $white;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+// Container
+.container {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// Intro
+.intro {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  
+  background-color: #ffffff;
+}
+
+// Header
+.header {
+  position: relative;
+  z-index: 1;
+  padding-top: 70px;
+}
+
+// Logo
+.logo {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 56px;
+
+  padding: 0 24px 0 32px;
+
+  background-color: $black;
+  border-radius: 40px;
+
+  &__rocket {
+    position: absolute;
+
+    left: -18px;
+    top: 50%;
+
+    width: 62px;
+
+    transform: translateY(-50%);
+
+    animation: logo-rocket 0.3s ease-in-out infinite alternate;
+  }
+
+  &__text {
+    position: relative;
+
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1;
+
+    color: $white;
+  }
+}
+
+// Animations
+@keyframes logo-rocket {
+  from {
+    transform: translate(0, -50%);
+  }
+
+  to {
+    transform: translate(5px, calc(-50% - 5px));
+  }
+}
+
+// ========================
+// Components
+// ========================
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 56px;
+  padding: 0 32px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  color: $white;
+  background-color: #e83f79;
+
+  border-radius: 6px;
+
+  box-shadow: 0 12px 24px rgba(232, 63, 121, 0.3);
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &:hover {
+    background-color: #d9346d;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 14px 28px rgba(232, 63, 121, 0.4);
+  }
+}
+
+// Hero
+.hero {
+  position: relative;
+  z-index: 1;
+
+  padding: 40px 0 100px;
+
+  overflow: hidden;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 700px;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+
+    width: 40%;
+    max-width: 460px;
+  }
+
+  &__title {
+    margin: 0;
+
+    font-size: 54px;
+    font-weight: 800;
+    line-height: 1.05;
+
+    text-transform: uppercase;
+  }
+
+  &__text {
+    max-width: 390px;
+
+    margin: 32px 0 0;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  &__button {
+    margin-top: 32px;
+  }
+
+  &__visual {
+    position: relative;
+    z-index: 1;
+
+    width: 58%;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+// How it works
+
+// Quiz types
+
+// Benefits
+
+// Contact
+
+// Modal
+
+// Media queries
