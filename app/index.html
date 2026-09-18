@@ -13,6 +13,12 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -105,6 +111,102 @@
       </div>
     </section>
 
+    <section class="quiz-types">
+      <div class="container quiz-types__container">
+        <h2 class="section-title">Що таке квіз-тести</h2>
+
+        <p class="quiz-types__description">
+          Дослідження показують, що користувачі відкривають 82% квізів, 
+          які трапляються їм у стрічці, та активно діляться результатами 
+          після проходження.
+        </p>
+
+        <p class="quiz-types__subtitle">
+          Які існують основні типи та види квіз-тестів:
+        </p>
+
+        <div class="quiz-types__slider swiper">
+          <div class="swiper-wrapper">
+            <article class="quiz-card swiper-slide">
+              <img
+                class="quiz-card__image"
+                src="img/quiz-entertainment.png"
+                alt="Повітряні кульки"
+              />
+
+              <h3 class="quiz-card__title">Розважальний</h3>
+
+              <p class="quiz-card__text">
+                Це вікторина найпростішого формату. 
+                Застосовуються для залучення користувачів до проекту, 
+                збільшення охоплення та лояльності його аудиторії, 
+                підвищення впізнаваності компанії, розміщення нативної реклами
+              </p>
+            </article>
+
+            <article class="quiz-card swiper-slide">
+              <img
+                class="quiz-card__image"
+                src="img/quiz-seller.png"
+                alt="Платіжний термінал"
+              />
+
+              <h3 class="quiz-card__title">Продавець</h3>
+
+              <p class="quiz-card__text">
+                Ці тести створюються посилення потреби людини 
+                у певних товарі чи послузі. Такі опитувальники 
+                припускають хороше знання пропонованого продукту та 
+                інтересів клієнтів
+              </p>
+            </article>
+
+            <article class="quiz-card swiper-slide">
+              <img
+                class="quiz-card__image"
+                src="img/quiz-engagement.png"
+                alt="Робота за ноутбуком"
+              />
+
+              <h3 class="quiz-card__title">Залучаючий</h3>
+
+              <p class="quiz-card__text">
+                У цьому випадку продукт не пропонується прямо, такі тести 
+                швидше допомагають відвідувачеві зрозуміти, що йому хочеться. 
+                Товар або послуга згадується як би ненароком, між справою.
+              </p>
+            </article>
+
+            <article class="quiz-card swiper-slide">
+              <img
+                class="quiz-card__image"
+                src="img/quiz-leads.png"
+                alt="Лупа"
+              />
+
+              <h3 class="quiz-card__title">Для захоплення лідів</h3>
+
+              <p class="quiz-card__text">
+                Це анкета, яка заповнюється для отримання інформації. 
+                Відмінність квізів Для захоплення лідів від інших у тому, 
+                що результат проходження тесту не видається відразу, а 
+                надсилається на email.
+              </p>
+            </article>
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <img
+        class="quiz-types__decoration"
+        src="img/quiz-decoration.png"
+        alt=""
+      />
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
