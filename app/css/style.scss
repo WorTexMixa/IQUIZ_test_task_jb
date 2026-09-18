@@ -44,7 +44,7 @@ textarea {
 // Container
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1100px;
 
   margin: 0 auto;
   padding: 0 20px;
@@ -124,7 +124,8 @@ textarea {
   align-items: center;
   justify-content: center;
 
-  min-height: 56px;
+  min-height: 68px;
+  min-width: 340px;
   padding: 0 32px;
 
   font-size: 16px;
@@ -157,21 +158,20 @@ textarea {
   padding: 45px 0 0px;
 
   &__inner {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    position: relative;
+    min-height: 650px;
   }
 
   &__content {
     position: relative;
     z-index: 2;
 
-    flex: 0 0 424px;
-    width: 424px;
+    width: 480px;
+    max-width: none;
   }
 
   &__title {
-    width: 424px;
+    width: 480px;
 
     margin: 0;
 
@@ -197,15 +197,19 @@ textarea {
   }
 
   &__visual {
-    position: relative;
-    z-index: 1;
+    position: absolute;
+    top: -260px;
+    left: 420px;
 
-    width: 58%;
-    transform: translateY(-250px);
+    width: 1100px;
+    max-width: none;
+
+    z-index: 1;
   }
 
   &__image {
     width: 100%;
+    max-width: none;
     height: auto;
   }
 }
