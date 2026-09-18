@@ -145,6 +145,10 @@ textarea {
 
     background-color: #ffc1d5;
   }
+
+  &--left {
+    margin: 0;
+  }
 }
 
 .button {
@@ -246,68 +250,89 @@ textarea {
 .how-it-works {
   position: relative;
 
-  padding: 120px 0;
+  min-height: 1080px;
+  padding: 190px 0 120px;
 
-  &__inner {
-    display: grid;
-
-    grid-template-columns: 280px 1fr 430px;
-
-    align-items: center;
-
-    gap: 50px;
-
-    margin-top: 70px;
-  }
+  overflow: hidden;
 
   &__decoration {
-    align-self: end;
+    position: absolute;
+
+    left: 0;
+    bottom: 20px;
+
+    width: 390px;
+
+    z-index: 1;
 
     img {
       width: 100%;
     }
   }
 
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 80px;
+  }
+
   &__content {
+    width: 430px;
+  }
+
+  &__text {
+    margin-top: 42px;
+
     font-size: 16px;
     line-height: 1.6;
 
     p {
-      margin: 0 0 22px;
+      margin: 0 0 28px;
     }
 
     strong {
       display: block;
 
-      margin-top: 28px;
+      margin-top: 38px;
 
       font-weight: 700;
     }
   }
 
   &__gallery {
-    display: grid;
+    display: flex;
+    align-items: center;
 
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+  }
 
-    gap: 16px;
+  &__small-photos {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
   }
 
   &__photo {
-    width: 100%;
-    height: 100%;
+    display: block;
 
     object-fit: cover;
 
-    border-radius: 28px;
+    border-radius: 35px;
 
     &--large {
-      grid-row: 1 / 3;
+      width: 360px;
+      height: 493px;
+    }
+
+    &--small {
+      width: 250px;
+      height: 342px;
     }
   }
 }
-
 
 // Quiz types
 
