@@ -638,9 +638,9 @@ textarea {
     padding-top: 150px;
   }
   .hero__visual {
-    left: 370px;
-    top: -210px;
-    width: 900px;
+    left: 48%;
+    top: -180px;
+    width: 74vw;
   }
   .hero__title {
     font-size: 40px;
@@ -680,6 +680,7 @@ textarea {
     min-height: 0;
   }
   .hero__content {
+    position: static;
     width: 100%;
     max-width: none;
   }

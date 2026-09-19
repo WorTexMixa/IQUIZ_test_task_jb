@@ -925,10 +925,10 @@ textarea {
 
   .hero {
     &__visual {
-      left: 370px;
-      top: -210px;
+      left: 48%;
+      top: -180px;
 
-      width: 900px;
+      width: 74vw;
     }
 
     &__title {
@@ -983,6 +983,8 @@ textarea {
     }
 
     &__content {
+      position: static;
+
       width: 100%;
       max-width: none;
     }
