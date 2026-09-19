@@ -355,6 +355,9 @@ textarea {
   padding: 160px 0 120px;
   overflow: hidden;
 }
+.benefits .section-title {
+  text-align: center;
+}
 .benefits::before {
   content: "";
   position: absolute;
@@ -414,7 +417,7 @@ textarea {
 .benefit-card {
   flex: 1 1 0;
   min-width: 0;
-  min-height: 380px;
+  height: 381px;
   padding: 46px 28px 36px;
   display: flex;
   flex-direction: column;
@@ -462,6 +465,11 @@ textarea {
   background-repeat: repeat-x;
 }
 
+@media (max-width: 1880px) {
+  .benefits__rocket {
+    display: none;
+  }
+}
 @media (max-width: 1440px) {
   .quiz-types__decoration {
     display: none;
@@ -513,15 +521,13 @@ textarea {
     flex-direction: column;
     gap: 20px;
   }
-  .benefits__rocket {
-    display: none;
-  }
   .benefits__button {
     width: 100%;
     margin-top: 24px;
   }
   .benefit-card {
     width: 100%;
+    height: auto;
     min-height: 330px;
   }
 }

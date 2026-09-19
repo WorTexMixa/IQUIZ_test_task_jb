@@ -498,6 +498,10 @@ textarea {
 
   overflow: hidden;
 
+  .section-title {
+    text-align: center;
+  }
+
   &::before {
     content: "";
 
@@ -586,7 +590,7 @@ textarea {
   flex: 1 1 0;
 
   min-width: 0;
-  min-height: 380px;
+  height: 381px;
 
   padding: 46px 28px 36px;
 
@@ -659,6 +663,14 @@ textarea {
 // Modal
 
 // Media queries
+@media (max-width: 1880px) {
+  .benefits {
+    &__rocket {
+      display: none;
+    }
+  }
+}
+
 @media (max-width: 1440px) {
   .quiz-types {
     &__decoration {
@@ -732,10 +744,6 @@ textarea {
       gap: 20px;
     }
 
-    &__rocket {
-      display: none;
-    }
-
     &__button {
       width: 100%;
 
@@ -745,6 +753,8 @@ textarea {
 
   .benefit-card {
     width: 100%;
+
+    height: auto;
     min-height: 330px;
   }
 }
