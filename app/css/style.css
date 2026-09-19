@@ -599,6 +599,12 @@ textarea {
   .benefits__rocket {
     display: none;
   }
+  .how-it-works__decoration {
+    display: none;
+  }
+  .benefits__rocket {
+    display: none;
+  }
 }
 @media (max-width: 1440px) {
   .quiz-types__decoration {
@@ -653,6 +659,55 @@ textarea {
   }
   .quiz-types__description {
     max-width: 760px;
+  }
+  .how-it-works {
+    min-height: auto;
+    padding: 110px 0 100px;
+  }
+  .how-it-works__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "title" "gallery" "text";
+    gap: 0;
+  }
+  .how-it-works__content {
+    display: contents;
+  }
+  .how-it-works__title {
+    grid-area: title;
+    justify-self: start;
+  }
+  .how-it-works__gallery {
+    grid-area: gallery;
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: 5px;
+    width: min(100%, 680px);
+    aspect-ratio: 320/186;
+    margin: 55px auto 0;
+    align-items: stretch;
+  }
+  .how-it-works__small-photos {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 12px;
+    min-width: 0;
+  }
+  .how-it-works__photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 28px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .how-it-works__photo--large, .how-it-works__photo--small {
+    width: 100%;
+    height: 100%;
+  }
+  .how-it-works__text {
+    grid-area: text;
+    width: min(100%, 680px);
+    margin: 45px auto 0;
   }
 }
 @media (max-width: 768px) {
@@ -718,6 +773,25 @@ textarea {
     width: auto;
     min-width: 0;
     margin: 0;
+  }
+  .how-it-works {
+    padding: 90px 0 80px;
+  }
+  .how-it-works__gallery {
+    width: min(100%, 600px);
+    margin-top: 48px;
+    gap: 10px;
+  }
+  .how-it-works__small-photos {
+    gap: 10px;
+  }
+  .how-it-works__photo {
+    border-radius: 24px;
+  }
+  .how-it-works__text {
+    width: min(100%, 600px);
+    margin-top: 38px;
+    font-size: 16px;
   }
   .quiz-types {
     min-height: auto;
@@ -850,6 +924,33 @@ textarea {
     bottom: 28px;
     min-height: 48px;
     font-size: 16px;
+  }
+  .how-it-works {
+    padding: 55px 0 60px;
+  }
+  .how-it-works__gallery {
+    width: min(100%, 320px);
+    aspect-ratio: 320/186;
+    margin: 38px auto 0;
+    gap: 8px;
+  }
+  .how-it-works__small-photos {
+    gap: 8px;
+  }
+  .how-it-works__photo {
+    border-radius: 20px;
+  }
+  .how-it-works__text {
+    width: 100%;
+    margin-top: 30px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  .how-it-works__text p {
+    margin-bottom: 24px;
+  }
+  .how-it-works__text strong {
+    margin-top: 28px;
   }
   .quiz-types {
     padding: 70px 0;

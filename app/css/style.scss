@@ -337,6 +337,7 @@ textarea {
     height: 650px;
 
     border-radius: 50%;
+
     background-color: #faf6ff;
 
     z-index: -1;
@@ -864,6 +865,18 @@ textarea {
       display: none;
     }
   }
+
+  .how-it-works {
+    &__decoration {
+      display: none;
+    }
+  }
+
+  .benefits {
+    &__rocket {
+      display: none;
+    }
+  }
 }
 
 @media (max-width: 1440px) {
@@ -945,6 +958,88 @@ textarea {
 
     &__description {
       max-width: 760px;
+    }
+  }
+
+  .how-it-works {
+    min-height: auto;
+
+    padding: 110px 0 100px;
+
+    &__inner {
+      display: grid;
+
+      grid-template-columns: 1fr;
+
+      grid-template-areas:
+        "title"
+        "gallery"
+        "text";
+
+      gap: 0;
+    }
+
+    &__content {
+      display: contents;
+    }
+
+    &__title {
+      grid-area: title;
+
+      justify-self: start;
+    }
+
+    &__gallery {
+      grid-area: gallery;
+
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1.35fr)
+        minmax(0, 1fr);
+
+      gap: 5px;
+
+      width: min(100%, 680px);
+
+      aspect-ratio: 320 / 186;
+
+      margin: 55px auto 0;
+
+      align-items: stretch;
+    }
+
+    &__small-photos {
+      display: grid;
+
+      grid-template-rows: 1fr 1fr;
+
+      gap: 12px;
+
+      min-width: 0;
+    }
+
+    &__photo {
+      width: 100%;
+      height: 100%;
+
+      border-radius: 28px;
+
+      object-fit: cover;
+
+      &--large,
+      &--small {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__text {
+      grid-area: text;
+
+      width: min(100%, 680px);
+
+      margin: 45px auto 0;
     }
   }
 }
@@ -1039,6 +1134,34 @@ textarea {
       min-width: 0;
 
       margin: 0;
+    }
+  }
+
+  .how-it-works {
+    padding: 90px 0 80px;
+
+    &__gallery {
+      width: min(100%, 600px);
+
+      margin-top: 48px;
+
+      gap: 10px;
+    }
+
+    &__small-photos {
+      gap: 10px;
+    }
+
+    &__photo {
+      border-radius: 24px;
+    }
+
+    &__text {
+      width: min(100%, 600px);
+
+      margin-top: 38px;
+
+      font-size: 16px;
     }
   }
 
@@ -1230,6 +1353,44 @@ textarea {
       min-height: 48px;
 
       font-size: 16px;
+    }
+  }
+
+  .how-it-works {
+    padding: 55px 0 60px;
+
+    &__gallery {
+      width: min(100%, 320px);
+      aspect-ratio: 320 / 186;
+
+      margin: 38px auto 0;
+
+      gap: 8px;
+    }
+
+    &__small-photos {
+      gap: 8px;
+    }
+
+    &__photo {
+      border-radius: 20px;
+    }
+
+    &__text {
+      width: 100%;
+
+      margin-top: 30px;
+
+      font-size: 15px;
+      line-height: 1.55;
+
+      p {
+        margin-bottom: 24px;
+      }
+
+      strong {
+        margin-top: 28px;
+      }
     }
   }
 
