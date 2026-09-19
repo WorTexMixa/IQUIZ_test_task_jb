@@ -490,7 +490,170 @@ textarea {
 }
 
 // Benefits
+.benefits {
+  position: relative;
 
+  min-height: 1080px;
+  padding: 160px 0 120px;
+
+  overflow: hidden;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    left: -220px;
+    bottom: -220px;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background-color: #faf6ff;
+
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    right: -180px;
+    top: 170px;
+
+    width: 650px;
+    height: 650px;
+
+    border-radius: 50%;
+
+    background-color: #faf6ff;
+
+    z-index: -1;
+  }
+
+  &__description {
+    max-width: 880px;
+
+    margin: 70px auto 0;
+
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin: 28px 0 70px;
+
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+
+    gap: 20px;
+  }
+
+  &__button {
+    display: flex;
+
+    width: fit-content;
+
+    margin: 38px auto 0;
+  }
+
+  &__rocket {
+    position: absolute;
+
+    top: 150px;
+    right: 20px;
+
+    width: 520px;
+
+    z-index: 1;
+
+    pointer-events: none;
+  }
+}
+
+.benefit-card {
+  flex: 1 1 0;
+
+  min-width: 0;
+  min-height: 380px;
+
+  padding: 46px 28px 36px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: $white;
+
+  border: 1px solid #d9d9d9;
+  border-radius: 22px;
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    background-color: #f7f7f7;
+
+    img {
+      width: 72px;
+      height: 72px;
+
+      object-fit: contain;
+    }
+  }
+
+  &__title {
+    position: relative;
+
+    max-width: 260px;
+
+    margin: 38px 0 0;
+
+    padding-bottom: 22px;
+
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+
+      left: 50%;
+      bottom: 0;
+
+      width: 180px;
+      height: 4px;
+
+      transform: translateX(-50%);
+
+      background-image: linear-gradient(to right, #ed769c 50%, transparent 50%);
+
+      background-size: 14px 4px;
+      background-repeat: repeat-x;
+    }
+  }
+}
 // Contact
 
 // Modal
@@ -521,7 +684,7 @@ textarea {
 @media (max-width: 768px) {
   .quiz-types {
     min-height: auto;
-    
+
     padding: 100px 0 80px;
 
     &__description {
@@ -542,6 +705,47 @@ textarea {
     min-height: 490px;
 
     padding-bottom: 50px;
+  }
+
+  .benefits {
+    min-height: auto;
+
+    padding: 100px 0 80px;
+
+    &__description {
+      margin-top: 55px;
+
+      font-size: 16px;
+    }
+
+    &__subtitle {
+      margin: 28px auto 40px;
+
+      font-size: 16px;
+
+      max-width: 520px;
+    }
+
+    &__list {
+      flex-direction: column;
+
+      gap: 20px;
+    }
+
+    &__rocket {
+      display: none;
+    }
+
+    &__button {
+      width: 100%;
+
+      margin-top: 24px;
+    }
+  }
+
+  .benefit-card {
+    width: 100%;
+    min-height: 330px;
   }
 }
 
@@ -599,6 +803,50 @@ textarea {
       line-height: 1.5;
     }
   }
+
+  .benefits {
+    padding: 70px 0;
+
+    &__description {
+      margin-top: 50px;
+
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    &__subtitle {
+      margin: 28px auto 32px;
+
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    &__button {
+      min-width: 0;
+    }
+  }
+
+  .benefit-card {
+    min-height: 320px;
+
+    padding: 32px 20px 28px;
+
+    &__icon {
+      width: 140px;
+      height: 140px;
+
+      img {
+        width: 68px;
+        height: 68px;
+      }
+    }
+
+    &__title {
+      margin-top: 30px;
+
+      font-size: 16px;
+    }
+  }
 }
 
 @media (max-width: 320px) {
@@ -633,6 +881,31 @@ textarea {
 
     &__text {
       font-size: 13px;
+    }
+  }
+
+  .benefits {
+    &__description,
+    &__subtitle {
+      font-size: 14px;
+    }
+  }
+
+  .benefit-card {
+    padding: 28px 16px 24px;
+
+    &__icon {
+      width: 125px;
+      height: 125px;
+
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    &__title {
+      font-size: 15px;
     }
   }
 }
