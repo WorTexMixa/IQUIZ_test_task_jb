@@ -521,9 +521,9 @@ textarea {
 }
 .contact__visual {
   position: absolute;
-  left: 0;
-  top: -120px;
-  width: 720px;
+  left: -40px;
+  top: -180px;
+  width: 860px;
   pointer-events: none;
 }
 .contact__image {
@@ -531,7 +531,7 @@ textarea {
   height: auto;
 }
 .contact__prompt {
-  width: 600px;
+  width: 700px;
   margin: 90px 0 0;
   font-size: 24px;
   font-weight: 800;
@@ -581,6 +581,34 @@ textarea {
 @media (max-width: 1440px) {
   .quiz-types__decoration {
     display: none;
+  }
+  .contact__inner {
+    align-items: center;
+    min-height: 0;
+    gap: 0px;
+  }
+  .contact__prompt {
+    width: 100%;
+    max-width: 700px;
+    margin: 0;
+    text-align: center;
+  }
+  .contact__visual {
+    position: static;
+    width: 100%;
+    max-width: 650px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .contact__image {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .contact__form {
+    width: 100%;
+    max-width: 700px;
+    margin: 0;
   }
 }
 @media (max-width: 1024px) {
@@ -642,39 +670,28 @@ textarea {
     min-height: auto;
     padding: 100px 0 80px;
   }
-  .contact__container {
-    max-width: 100%;
-  }
   .contact__inner {
-    align-items: center;
-    min-height: 0;
     margin-top: 70px;
   }
   .contact__prompt {
-    width: 100%;
     max-width: 520px;
-    margin: 0;
     font-size: 22px;
     line-height: 1.35;
     text-align: center;
   }
   .contact__visual {
-    position: static;
-    width: 100%;
     max-width: 380px;
-    margin-top: 40px;
+  }
+  .contact__image {
+    max-width: 380px;
+    margin: 0 auto;
   }
   .contact__form {
     flex-direction: column;
-    width: 100%;
     max-width: 520px;
-    margin-top: 45px;
     gap: 36px;
   }
-  .contact__input {
-    width: 100%;
-  }
-  .contact__button {
+  .contact__input, .contact__button {
     width: 100%;
   }
 }
@@ -761,14 +778,14 @@ textarea {
     line-height: 1.35;
   }
   .contact__visual {
-    margin-top: 32px;
+    max-width: 280px;
   }
   .contact__image {
     max-width: 280px;
+    margin: 0 auto;
   }
   .contact__form {
-    margin-top: 38px;
-    gap: 38px;
+    gap: 28px;
   }
   .contact__input {
     min-height: 58px;
