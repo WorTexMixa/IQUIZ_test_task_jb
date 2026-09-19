@@ -141,6 +141,18 @@ textarea {
   box-shadow: 0 14px 28px rgba(232, 63, 121, 0.4);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .hero {
   position: relative;
   padding: 45px 0 0px;
@@ -465,6 +477,105 @@ textarea {
   background-repeat: repeat-x;
 }
 
+.contact {
+  position: relative;
+  min-height: 1080px;
+  padding: 120px 0;
+  overflow: hidden;
+}
+.contact .section-title {
+  text-align: center;
+}
+.contact::before {
+  content: "";
+  position: absolute;
+  left: 170px;
+  top: 200px;
+  width: 650px;
+  height: 650px;
+  border-radius: 50%;
+  background-color: #faf6ff;
+  z-index: -1;
+}
+.contact::after {
+  content: "";
+  position: absolute;
+  right: -300px;
+  top: 120px;
+  width: 850px;
+  height: 850px;
+  border-radius: 50%;
+  background-color: #faf6ff;
+  z-index: -1;
+}
+.contact__container {
+  max-width: 1560px;
+}
+.contact__inner {
+  display: grid;
+  grid-template-columns: 620px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  -moz-column-gap: 180px;
+       column-gap: 180px;
+  row-gap: 36px;
+  align-items: center;
+  margin-top: 100px;
+}
+.contact__visual {
+  grid-column: 1;
+  grid-row: 1/3;
+}
+.contact__image {
+  width: 100%;
+  max-width: 620px;
+}
+.contact__prompt {
+  grid-column: 2;
+  grid-row: 1;
+  max-width: 520px;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+.contact__form {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 700px;
+}
+.contact__input {
+  flex: 1;
+  min-width: 0;
+  min-height: 60px;
+  padding: 0 28px;
+  font-size: 16px;
+  color: #191919;
+  background-color: #ffffff;
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  outline: none;
+}
+.contact__input::-moz-placeholder {
+  color: #b7b7b7;
+}
+.contact__input::placeholder {
+  color: #b7b7b7;
+}
+.contact__input:focus {
+  border-color: #ed769c;
+}
+.contact__button {
+  min-width: 240px;
+  min-height: 60px;
+  border: 0;
+  cursor: pointer;
+}
+
 @media (max-width: 1880px) {
   .benefits__rocket {
     display: none;
@@ -529,6 +640,49 @@ textarea {
     width: 100%;
     height: auto;
     min-height: 330px;
+  }
+  .contact {
+    min-height: auto;
+    padding: 100px 0 80px;
+  }
+  .contact__container {
+    max-width: 100%;
+  }
+  .contact__inner {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "prompt" "visual" "form";
+    gap: 0;
+    margin-top: 70px;
+  }
+  .contact__prompt {
+    grid-area: prompt;
+    max-width: 520px;
+    margin: 0 auto;
+    font-size: 22px;
+    line-height: 1.35;
+    text-align: center;
+  }
+  .contact__visual {
+    grid-area: visual;
+    margin: 40px auto 0;
+  }
+  .contact__image {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  .contact__form {
+    grid-area: form;
+    flex-direction: column;
+    max-width: 520px;
+    margin: 45px auto 0;
+    gap: 36px;
+  }
+  .contact__input {
+    width: 100%;
+  }
+  .contact__button {
+    width: 100%;
   }
 }
 @media (max-width: 480px) {
@@ -602,6 +756,38 @@ textarea {
     margin-top: 30px;
     font-size: 16px;
   }
+  .contact {
+    padding: 70px 0 65px;
+  }
+  .contact__inner {
+    margin-top: 60px;
+  }
+  .contact__prompt {
+    max-width: 320px;
+    font-size: 21px;
+    line-height: 1.35;
+  }
+  .contact__visual {
+    margin-top: 32px;
+  }
+  .contact__image {
+    max-width: 280px;
+  }
+  .contact__form {
+    margin-top: 38px;
+    gap: 38px;
+  }
+  .contact__input {
+    min-height: 58px;
+    padding: 0 24px;
+    font-size: 16px;
+  }
+  .contact__button {
+    width: calc(100% - 32px);
+    min-width: 0;
+    min-height: 58px;
+    margin: 0 auto;
+  }
 }
 @media (max-width: 320px) {
   .container {
@@ -643,6 +829,18 @@ textarea {
     height: 60px;
   }
   .benefit-card__title {
+    font-size: 15px;
+  }
+  .contact__prompt {
+    font-size: 18px;
+  }
+  .contact__image {
+    max-width: 240px;
+  }
+  .contact__input {
+    font-size: 14px;
+  }
+  .contact__button {
     font-size: 15px;
   }
 }/*# sourceMappingURL=style.css.map */

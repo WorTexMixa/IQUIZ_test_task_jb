@@ -199,6 +199,24 @@ textarea {
   }
 }
 
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  padding: 0;
+  margin: -1px;
+
+  overflow: hidden;
+
+  clip: rect(0, 0, 0, 0);
+
+  white-space: nowrap;
+
+  border: 0;
+}
+
 // Hero
 .hero {
   position: relative;
@@ -659,6 +677,145 @@ textarea {
   }
 }
 // Contact
+.contact {
+  position: relative;
+
+  min-height: 1080px;
+  padding: 120px 0;
+
+  overflow: hidden;
+
+  .section-title {
+    text-align: center;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    left: 170px;
+    top: 200px;
+
+    width: 650px;
+    height: 650px;
+
+    border-radius: 50%;
+
+    background-color: #faf6ff;
+
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    right: -300px;
+    top: 120px;
+
+    width: 850px;
+    height: 850px;
+
+    border-radius: 50%;
+
+    background-color: #faf6ff;
+
+    z-index: -1;
+  }
+
+  &__container {
+    max-width: 1560px;
+  }
+
+  &__inner {
+    display: grid;
+
+    grid-template-columns: 620px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+
+    column-gap: 180px;
+    row-gap: 36px;
+
+    align-items: center;
+
+    margin-top: 100px;
+  }
+
+  &__visual {
+    grid-column: 1;
+    grid-row: 1 / 3;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 620px;
+  }
+
+  &__prompt {
+    grid-column: 2;
+    grid-row: 1;
+
+    max-width: 520px;
+
+    margin: 0;
+
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.35;
+
+    text-transform: uppercase;
+  }
+
+  &__form {
+    grid-column: 2;
+    grid-row: 2;
+
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    width: 100%;
+    max-width: 700px;
+  }
+
+  &__input {
+    flex: 1;
+
+    min-width: 0;
+    min-height: 60px;
+
+    padding: 0 28px;
+
+    font-size: 16px;
+
+    color: $text-color;
+    background-color: $white;
+
+    border: 1px solid #bdbdbd;
+    border-radius: 4px;
+
+    outline: none;
+
+    &::placeholder {
+      color: #b7b7b7;
+    }
+
+    &:focus {
+      border-color: #ed769c;
+    }
+  }
+
+  &__button {
+    min-width: 240px;
+    min-height: 60px;
+
+    border: 0;
+    cursor: pointer;
+  }
+}
 
 // Modal
 
@@ -756,6 +913,75 @@ textarea {
 
     height: auto;
     min-height: 330px;
+  }
+
+  .contact {
+    min-height: auto;
+
+    padding: 100px 0 80px;
+
+    &__container {
+      max-width: 100%;
+    }
+
+    &__inner {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+
+      grid-template-areas:
+        "prompt"
+        "visual"
+        "form";
+
+      gap: 0;
+
+      margin-top: 70px;
+    }
+
+    &__prompt {
+      grid-area: prompt;
+
+      max-width: 520px;
+
+      margin: 0 auto;
+
+      font-size: 22px;
+      line-height: 1.35;
+
+      text-align: center;
+    }
+
+    &__visual {
+      grid-area: visual;
+
+      margin: 40px auto 0;
+    }
+
+    &__image {
+      max-width: 380px;
+
+      margin: 0 auto;
+    }
+
+    &__form {
+      grid-area: form;
+
+      flex-direction: column;
+
+      max-width: 520px;
+
+      margin: 45px auto 0;
+
+      gap: 36px;
+    }
+
+    &__input {
+      width: 100%;
+    }
+
+    &__button {
+      width: 100%;
+    }
   }
 }
 
@@ -857,6 +1083,52 @@ textarea {
       font-size: 16px;
     }
   }
+
+  .contact {
+    padding: 70px 0 65px;
+
+    &__inner {
+      margin-top: 60px;
+    }
+
+    &__prompt {
+      max-width: 320px;
+
+      font-size: 21px;
+      line-height: 1.35;
+    }
+
+    &__visual {
+      margin-top: 32px;
+    }
+
+    &__image {
+      max-width: 280px;
+    }
+
+    &__form {
+      margin-top: 38px;
+
+      gap: 38px;
+    }
+
+    &__input {
+      min-height: 58px;
+
+      padding: 0 24px;
+
+      font-size: 16px;
+    }
+
+    &__button {
+      width: calc(100% - 32px);
+
+      min-width: 0;
+      min-height: 58px;
+
+      margin: 0 auto;
+    }
+  }
 }
 
 @media (max-width: 320px) {
@@ -915,6 +1187,24 @@ textarea {
     }
 
     &__title {
+      font-size: 15px;
+    }
+  }
+
+  .contact {
+    &__prompt {
+      font-size: 18px;
+    }
+
+    &__image {
+      max-width: 240px;
+    }
+
+    &__input {
+      font-size: 14px;
+    }
+
+    &__button {
       font-size: 15px;
     }
   }
