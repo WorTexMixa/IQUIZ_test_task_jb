@@ -284,6 +284,7 @@ textarea {
   text-align: center;
 }
 .quiz-types__slider {
+  position: relative;
   overflow: hidden;
 }
 .quiz-types__decoration {
@@ -293,6 +294,9 @@ textarea {
   width: 506px;
   z-index: -1;
   pointer-events: none;
+}
+.quiz-types .swiper-pagination {
+  bottom: 16px !important;
 }
 .quiz-types .swiper-pagination-bullet {
   width: 10px;
@@ -360,14 +364,10 @@ textarea {
   .quiz-types__description {
     max-width: 760px;
   }
-  .quiz-types__decoration {
-    width: 240px;
-    right: -50px;
-    top: 200px;
-  }
 }
 @media (max-width: 768px) {
   .quiz-types {
+    min-height: auto;
     padding: 100px 0 80px;
   }
   .quiz-types__description {
@@ -378,25 +378,10 @@ textarea {
     margin: 28px 0 32px;
     font-size: 16px;
   }
-  .quiz-types__decoration {
-    display: none;
-  }
-  .quiz-types__slider {
-    padding-bottom: 45px;
-  }
-  .quiz-types .swiper-pagination {
-    display: block;
-    bottom: 10px;
-  }
-  .quiz-types .quiz-types__slider {
-    position: relative;
-  }
-  .quiz-types .quiz-types__slider .swiper-pagination {
-    bottom: 14px;
-  }
   .quiz-card {
     height: auto;
     min-height: 490px;
+    padding-bottom: 50px;
   }
 }
 @media (max-width: 480px) {
@@ -423,7 +408,7 @@ textarea {
   .quiz-card {
     min-height: 0;
     height: auto;
-    padding: 16px 18px 22px;
+    padding: 16px 18px 50px;
     border-radius: 20px;
   }
   .quiz-card__image {

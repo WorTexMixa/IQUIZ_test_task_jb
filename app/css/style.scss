@@ -398,6 +398,7 @@ textarea {
   }
 
   &__slider {
+    position: relative;
     overflow: hidden;
   }
 
@@ -411,6 +412,10 @@ textarea {
 
     z-index: -1;
     pointer-events: none;
+  }
+
+  .swiper-pagination {
+    bottom: 16px !important;
   }
 
   .swiper-pagination-bullet {
@@ -491,7 +496,6 @@ textarea {
 // Modal
 
 // Media queries
-
 @media (max-width: 1440px) {
   .quiz-types {
     &__decoration {
@@ -511,18 +515,13 @@ textarea {
     &__description {
       max-width: 760px;
     }
-
-    &__decoration {
-      width: 240px;
-
-      right: -50px;
-      top: 200px;
-    }
   }
 }
 
 @media (max-width: 768px) {
   .quiz-types {
+    min-height: auto;
+    
     padding: 100px 0 80px;
 
     &__description {
@@ -536,32 +535,13 @@ textarea {
 
       font-size: 16px;
     }
-
-    &__decoration {
-      display: none;
-    }
-
-    &__slider {
-      padding-bottom: 45px;
-    }
-
-    .swiper-pagination {
-      display: block;
-
-      bottom: 10px;
-    }
-    .quiz-types__slider {
-      position: relative;
-
-      .swiper-pagination {
-        bottom: 14px;
-      }
-    }
   }
 
   .quiz-card {
     height: auto;
     min-height: 490px;
+
+    padding-bottom: 50px;
   }
 }
 
@@ -598,7 +578,7 @@ textarea {
     min-height: 0;
     height: auto;
 
-    padding: 16px 18px 22px;
+    padding: 16px 18px 50px;
 
     border-radius: 20px;
 
