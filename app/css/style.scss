@@ -401,22 +401,32 @@ textarea {
     width: 430px;
   }
 
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+
+    color: #000000;
+  }
+
   &__text {
     margin-top: 42px;
 
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 18px;
+    line-height: 28px;
+    color: $text-color;
 
     p {
-      margin: 0 0 28px;
+      margin: 0 0 25px;
     }
 
     strong {
       display: block;
-
+      font-size: 18px;
       margin-top: 38px;
 
       font-weight: 700;
+      color: #000000;
     }
   }
 
@@ -424,7 +434,7 @@ textarea {
     display: flex;
     align-items: center;
 
-    gap: 20px;
+    gap: 27px;
   }
 
   &__small-photos {
@@ -439,7 +449,7 @@ textarea {
 
     object-fit: cover;
 
-    border-radius: 35px;
+    border-radius: 50px;
 
     &--large {
       width: 360px;
@@ -1100,7 +1110,8 @@ body.modal-open {
   }
 
   .how-it-works {
-    min-height: auto;
+    min-height: 100vh;
+    min-height: 100svh;
 
     padding: 110px 0 100px;
 
@@ -1182,6 +1193,20 @@ body.modal-open {
       &--small {
         width: 100%;
         height: 100%;
+      }
+    }
+
+    &__photo--large {
+      object-position: 65% center;
+    }
+
+    &__small-photos {
+      img:first-child {
+        object-position: center center;
+      }
+
+      img:last-child {
+        object-position: center 10%;
       }
     }
 
@@ -1521,7 +1546,7 @@ body.modal-open {
   }
 
   .how-it-works {
-    padding: 55px 0 60px;
+    padding: 16px 0 20px;
 
     &__gallery {
       width: 100%;
@@ -1531,15 +1556,30 @@ body.modal-open {
 
       margin: 38px auto 0;
 
-      gap: 5px;
+      column-gap: 5px;
+      row-gap: 0;
     }
 
     &__small-photos {
-      gap: 5px;
+      row-gap: 4px;
     }
 
     &__photo {
       border-radius: 20px;
+    }
+
+    &__title {
+      margin-left: 4px;
+
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+
+      &::before {
+        left: 0;
+
+        width: calc(100% + 44px);
+      }
     }
 
     &__text {
@@ -1548,14 +1588,16 @@ body.modal-open {
       margin-top: 30px;
 
       font-size: 15px;
-      line-height: 1.55;
+      line-height: 22px;
 
       p {
-        margin-bottom: 24px;
+        margin-bottom: 0 0 24px;
       }
 
       strong {
-        margin-top: 28px;
+        margin-top: 18px;
+
+        line-height: 21px;
       }
     }
   }
