@@ -1,9 +1,17 @@
 // Variables
 $font-main: "Montserrat", sans-serif;
 
-$text-color: #191919;
+$black: #161616;
+$text-color: #515151;
 $white: #ffffff;
-$black: #191919;
+
+$pink-start: #ed769c;
+$pink-end: #bb466b;
+
+$logo-start: #515151;
+$logo-end: #1d1d1d;
+
+$ellipse-color: #f7f1ff;
 
 // Reset  Base
 *,
@@ -54,7 +62,7 @@ textarea {
 .intro {
   position: relative;
 
-  min-height: 100vh;
+  min-height: 1080px;
 
   overflow: hidden;
 
@@ -73,7 +81,11 @@ textarea {
 
     border-radius: 50%;
 
-    background-color: #faf7ff;
+    background: linear-gradient(
+      180deg,
+      rgba(247, 241, 255, 1) 0%,
+      rgba(247, 241, 255, 0) 100%
+    );
 
     z-index: 0;
   }
@@ -91,7 +103,11 @@ textarea {
 
     border-radius: 50%;
 
-    background-color: #faf7ff;
+    background: linear-gradient(
+      180deg,
+      rgba(247, 241, 255, 1) 0%,
+      rgba(247, 241, 255, 0) 100%
+    );
 
     z-index: 0;
   }
@@ -101,7 +117,7 @@ textarea {
 .header {
   position: relative;
   z-index: 3;
-  padding-top: 220px;
+  padding-top: 268px;
 }
 
 // Logo
@@ -110,21 +126,24 @@ textarea {
 
   display: inline-flex;
   align-items: center;
+  justify-content: center;
 
-  min-height: 56px;
+  width: 306px;
+  height: 75px;
 
-  padding: 0 24px 0 32px;
+  padding: 0 24px 0 55px;
 
-  background-color: $black;
+  background: linear-gradient(90deg, $logo-start 0%, $logo-end 100%);
+
   border-radius: 40px;
 
   &__rocket {
     position: absolute;
 
-    left: -18px;
+    left: -25px;
     top: 50%;
 
-    width: 62px;
+    width: 105px;
 
     transform: translateY(-50%);
 
@@ -132,8 +151,6 @@ textarea {
   }
 
   &__text {
-    position: relative;
-
     font-size: 46px;
     font-weight: 800;
     line-height: 1;
@@ -209,31 +226,33 @@ textarea {
   align-items: center;
   justify-content: center;
 
-  min-height: 68px;
+  width: 340px;
   min-width: 340px;
+  height: 68px;
+  min-height: 68px;
+
   padding: 0 32px;
 
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
 
   color: $white;
-  background-color: #e83f79;
 
-  border-radius: 6px;
+  background: linear-gradient(180deg, $pink-start 0%, $pink-end 100%);
 
-  box-shadow: 0 12px 24px rgba(232, 63, 121, 0.3);
+  border-radius: 8px;
+
+  box-shadow: 0 20px 28px rgba(171, 4, 54, 0.2);
 
   transition:
-    background-color 0.3s ease,
     transform 0.3s ease,
     box-shadow 0.3s ease;
 
   &:hover {
-    background-color: #d9346d;
-
     transform: translateY(-2px);
 
-    box-shadow: 0 14px 28px rgba(232, 63, 121, 0.4);
+    box-shadow: 0 22px 32px rgba(171, 4, 54, 0.26);
   }
 }
 
@@ -258,11 +277,11 @@ textarea {
 // Hero
 .hero {
   position: relative;
-  padding: 45px 0 0px;
+  padding: 41px 0 0px;
 
   &__inner {
     position: relative;
-    min-height: 650px;
+    min-height: 696px;
   }
 
   &__content {
@@ -274,37 +293,48 @@ textarea {
   }
 
   &__title {
-    width: 480px;
+    width: 450px;
 
     margin: 0;
 
     font-size: 46px;
     font-weight: 800;
-    line-height: 1.05;
+    line-height: 1.22;
+
+    letter-spacing: 0;
+
+    color: $black;
 
     text-transform: uppercase;
   }
 
   &__text {
-    max-width: 390px;
+    width: 430px;
+    max-width: none;
 
-    margin: 32px 0 0;
+    margin: 30px 0 0;
 
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.5;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 32px;
+
+    color: $text-color;
   }
 
   &__button {
-    margin-top: 32px;
+    margin-top: 55px;
+    box-shadow:
+      0 12px 14px rgba(171, 4, 54, 0.16),
+      0 28px 28px rgba(171, 4, 54, 0.28);
   }
 
   &__visual {
     position: absolute;
-    top: -260px;
-    left: 420px;
 
-    width: 1100px;
+    top: -230px;
+    left: 350px;
+
+    width: 1120px;
     max-width: none;
 
     z-index: 1;
@@ -1165,6 +1195,10 @@ body.modal-open {
 }
 
 @media (max-width: 768px) {
+  .intro {
+    min-height: auto;
+  }
+
   .header {
     padding-top: 32px;
   }

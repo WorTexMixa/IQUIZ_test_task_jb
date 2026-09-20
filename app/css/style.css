@@ -11,7 +11,7 @@ html {
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  color: #191919;
+  color: #515151;
   background-color: #ffffff;
 }
 
@@ -40,7 +40,7 @@ textarea {
 
 .intro {
   position: relative;
-  min-height: 100vh;
+  min-height: 1080px;
   overflow: hidden;
   background-color: #ffffff;
 }
@@ -52,7 +52,7 @@ textarea {
   width: 1050px;
   height: 1050px;
   border-radius: 50%;
-  background-color: #faf7ff;
+  background: linear-gradient(180deg, rgb(247, 241, 255) 0%, rgba(247, 241, 255, 0) 100%);
   z-index: 0;
 }
 .intro::after {
@@ -63,35 +63,36 @@ textarea {
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background-color: #faf7ff;
+  background: linear-gradient(180deg, rgb(247, 241, 255) 0%, rgba(247, 241, 255, 0) 100%);
   z-index: 0;
 }
 
 .header {
   position: relative;
   z-index: 3;
-  padding-top: 220px;
+  padding-top: 268px;
 }
 
 .logo {
   position: relative;
   display: inline-flex;
   align-items: center;
-  min-height: 56px;
-  padding: 0 24px 0 32px;
-  background-color: #191919;
+  justify-content: center;
+  width: 306px;
+  height: 75px;
+  padding: 0 24px 0 55px;
+  background: linear-gradient(90deg, #515151 0%, #1d1d1d 100%);
   border-radius: 40px;
 }
 .logo__rocket {
   position: absolute;
-  left: -18px;
+  left: -25px;
   top: 50%;
-  width: 62px;
+  width: 105px;
   transform: translateY(-50%);
   animation: logo-rocket 0.3s ease-in-out infinite alternate;
 }
 .logo__text {
-  position: relative;
   font-size: 46px;
   font-weight: 800;
   line-height: 1;
@@ -134,7 +135,7 @@ textarea {
   bottom: -18px;
   width: 100%;
   height: 4px;
-  background-image: linear-gradient(to right, #191919 50%, transparent 50%);
+  background-image: linear-gradient(to right, #161616 50%, transparent 50%);
   background-size: 16px 4px;
   background-repeat: repeat-x;
 }
@@ -146,21 +147,23 @@ textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 68px;
+  width: 340px;
   min-width: 340px;
+  height: 68px;
+  min-height: 68px;
   padding: 0 32px;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
   color: #ffffff;
-  background-color: #e83f79;
-  border-radius: 6px;
-  box-shadow: 0 12px 24px rgba(232, 63, 121, 0.3);
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(180deg, #ed769c 0%, #bb466b 100%);
+  border-radius: 8px;
+  box-shadow: 0 20px 28px rgba(171, 4, 54, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .button:hover {
-  background-color: #d9346d;
   transform: translateY(-2px);
-  box-shadow: 0 14px 28px rgba(232, 63, 121, 0.4);
+  box-shadow: 0 22px 32px rgba(171, 4, 54, 0.26);
 }
 
 .visually-hidden {
@@ -177,11 +180,11 @@ textarea {
 
 .hero {
   position: relative;
-  padding: 45px 0 0px;
+  padding: 41px 0 0px;
 }
 .hero__inner {
   position: relative;
-  min-height: 650px;
+  min-height: 696px;
 }
 .hero__content {
   position: relative;
@@ -190,28 +193,33 @@ textarea {
   max-width: none;
 }
 .hero__title {
-  width: 480px;
+  width: 450px;
   margin: 0;
   font-size: 46px;
   font-weight: 800;
-  line-height: 1.05;
+  line-height: 1.22;
+  letter-spacing: 0;
+  color: #161616;
   text-transform: uppercase;
 }
 .hero__text {
-  max-width: 390px;
-  margin: 32px 0 0;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.5;
+  width: 430px;
+  max-width: none;
+  margin: 30px 0 0;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 32px;
+  color: #515151;
 }
 .hero__button {
-  margin-top: 32px;
+  margin-top: 55px;
+  box-shadow: 0 12px 14px rgba(171, 4, 54, 0.16), 0 28px 28px rgba(171, 4, 54, 0.28);
 }
 .hero__visual {
   position: absolute;
-  top: -260px;
-  left: 420px;
-  width: 1100px;
+  top: -230px;
+  left: 350px;
+  width: 1120px;
   max-width: none;
   z-index: 1;
 }
@@ -573,7 +581,7 @@ textarea {
   min-height: 60px;
   padding: 0 28px;
   font-size: 16px;
-  color: #191919;
+  color: #515151;
   background-color: #ffffff;
   border: 1px solid #bdbdbd;
   border-radius: 4px;
@@ -636,7 +644,7 @@ textarea {
   font-size: 18px;
   font-weight: 500;
   line-height: 24px;
-  color: #191919;
+  color: #161616;
 }
 .modal__close {
   display: flex;
@@ -648,7 +656,7 @@ textarea {
   font-size: 26px;
   font-weight: 400;
   line-height: 1;
-  color: #191919;
+  color: #161616;
   background: none;
   border: 0;
   cursor: pointer;
@@ -792,6 +800,9 @@ body.modal-open {
   }
 }
 @media (max-width: 768px) {
+  .intro {
+    min-height: auto;
+  }
   .header {
     padding-top: 32px;
   }
