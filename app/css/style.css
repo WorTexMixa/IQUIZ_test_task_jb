@@ -534,10 +534,13 @@ textarea {
 .contact {
   position: relative;
   min-height: 1080px;
-  padding: 120px 0;
+  padding: 73px 0 0;
   overflow: hidden;
 }
 .contact .section-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
   text-align: center;
 }
 .contact::before {
@@ -571,12 +574,12 @@ textarea {
   flex-direction: column;
   align-items: flex-end;
   min-height: 650px;
-  margin-top: 90px;
+  margin-top: 227px;
 }
 .contact__visual {
   position: absolute;
   left: -40px;
-  top: -180px;
+  top: -235px;
   width: 860px;
   pointer-events: none;
 }
@@ -585,43 +588,47 @@ textarea {
   height: auto;
 }
 .contact__prompt {
-  width: 700px;
-  margin: 90px 0 0;
-  font-size: 24px;
+  width: 430px;
+  margin: 0 259px 0 0;
+  font-size: 22px;
   font-weight: 800;
-  line-height: 1.35;
+  line-height: 32px;
   text-transform: uppercase;
 }
 .contact__form {
   display: flex;
   align-items: center;
+  width: 689px;
   gap: 16px;
-  width: 700px;
-  margin-top: 36px;
+  margin-top: 40px;
 }
 .contact__input {
-  flex: 1;
-  min-width: 0;
+  flex: 0 0 430px;
+  width: 430px;
+  height: 60px;
   min-height: 60px;
   padding: 0 28px;
   font-size: 16px;
   color: #515151;
   background-color: #ffffff;
-  border: 1px solid #bdbdbd;
+  border: 1px solid #a7a7a7;
   border-radius: 4px;
   outline: none;
 }
 .contact__input::-moz-placeholder {
-  color: #b7b7b7;
+  color: #a3a3a3;
 }
 .contact__input::placeholder {
-  color: #b7b7b7;
+  color: #a3a3a3;
 }
 .contact__input:focus {
   border-color: #ed769c;
 }
 .contact__button {
-  min-width: 240px;
+  flex: 0 0 243px;
+  width: 243px;
+  min-width: 243px;
+  height: 60px;
   min-height: 60px;
   border: 0;
   cursor: pointer;
@@ -720,7 +727,7 @@ body.modal-open {
   .contact__inner {
     align-items: center;
     min-height: 0;
-    gap: 0px;
+    margin-top: 70;
   }
   .contact__prompt {
     width: 100%;
@@ -729,21 +736,25 @@ body.modal-open {
     text-align: center;
   }
   .contact__visual {
-    position: static;
+    position: relative;
     width: 100%;
     max-width: 650px;
-    margin: 0;
-    display: flex;
-    justify-content: center;
+    height: 420px;
+    margin: 25px auto 0;
+    pointer-events: none;
   }
   .contact__image {
-    width: 100%;
-    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 650px;
+    max-width: none;
+    transform: translate(-50%, -50%);
   }
   .contact__form {
     width: 100%;
     max-width: 700px;
-    margin: 0;
+    margin: 25px;
   }
 }
 @media (max-width: 1024px) {
@@ -1002,10 +1013,10 @@ body.modal-open {
   }
   .contact {
     min-height: auto;
-    padding: 100px 0 80px;
+    padding: 70px 0 60px;
   }
   .contact__inner {
-    margin-top: 70px;
+    margin-top: 60px;
   }
   .contact__prompt {
     max-width: 520px;
@@ -1014,19 +1025,34 @@ body.modal-open {
     text-align: center;
   }
   .contact__visual {
-    max-width: 380px;
+    height: 320px;
+    max-width: 520px;
+    margin-top: 20px;
   }
   .contact__image {
-    max-width: 380px;
-    margin: 0 auto;
+    width: 500px;
+    max-width: none;
   }
   .contact__form {
     flex-direction: column;
+    width: 100%;
     max-width: 520px;
+    margin-top: 20px;
     gap: 36px;
   }
-  .contact__input, .contact__button {
+  .contact__input {
+    flex: none;
     width: 100%;
+    height: 58px;
+    min-height: 58px;
+  }
+  .contact__button {
+    flex: none;
+    width: 100%;
+    min-width: 0;
+    height: 58px;
+    min-height: 58px;
+    margin: 0;
   }
 }
 @media (max-width: 480px) {
@@ -1252,35 +1278,67 @@ body.modal-open {
     line-height: 24px;
   }
   .contact {
-    padding: 70px 0 65px;
+    min-height: 692px;
+    padding: 31px 0 58px;
+  }
+  .contact .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .contact .section-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
   }
   .contact__inner {
-    margin-top: 60px;
+    margin-top: 53px;
   }
   .contact__prompt {
+    width: 100%;
     max-width: 320px;
-    font-size: 21px;
-    line-height: 1.35;
+    margin: 0;
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 25px;
+    text-align: center;
   }
   .contact__visual {
-    max-width: 280px;
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    height: 280px;
+    margin: 12px auto 0;
   }
   .contact__image {
-    max-width: 280px;
-    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 430px;
+    max-width: none;
+    margin: 0;
+    transform: translate(-50%, -50%);
   }
   .contact__form {
-    gap: 28px;
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin-top: 19px;
+    gap: 40px;
   }
   .contact__input {
-    min-height: 58px;
+    flex: none;
+    width: 100%;
+    height: 50px;
+    min-height: 50px;
     padding: 0 24px;
     font-size: 16px;
   }
   .contact__button {
-    width: calc(100% - 32px);
+    flex: none;
+    width: 290px;
     min-width: 0;
-    min-height: 58px;
+    height: 50px;
+    min-height: 50px;
     margin: 0 auto;
   }
   .modal {

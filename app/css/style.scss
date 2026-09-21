@@ -782,11 +782,14 @@ textarea {
   position: relative;
 
   min-height: 1080px;
-  padding: 120px 0;
+  padding: 73px 0 0;
 
   overflow: hidden;
 
   .section-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
     text-align: center;
   }
 
@@ -839,14 +842,14 @@ textarea {
 
     min-height: 650px;
 
-    margin-top: 90px;
+    margin-top: 227px;
   }
 
   &__visual {
     position: absolute;
 
     left: -40px;
-    top: -180px;
+    top: -235px;
 
     width: 860px;
 
@@ -859,13 +862,13 @@ textarea {
   }
 
   &__prompt {
-    width: 700px;
+    width: 430px;
 
-    margin: 90px 0 0;
+    margin: 0 259px 0 0;
 
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 800;
-    line-height: 1.35;
+    line-height: 32px;
 
     text-transform: uppercase;
   }
@@ -874,17 +877,18 @@ textarea {
     display: flex;
     align-items: center;
 
+    width: 689px;
+
     gap: 16px;
 
-    width: 700px;
-
-    margin-top: 36px;
+    margin-top: 40px;
   }
 
   &__input {
-    flex: 1;
+    flex: 0 0 430px;
 
-    min-width: 0;
+    width: 430px;
+    height: 60px;
     min-height: 60px;
 
     padding: 0 28px;
@@ -894,13 +898,13 @@ textarea {
     color: $text-color;
     background-color: $white;
 
-    border: 1px solid #bdbdbd;
+    border: 1px solid #a7a7a7;
     border-radius: 4px;
 
     outline: none;
 
     &::placeholder {
-      color: #b7b7b7;
+      color: #a3a3a3;
     }
 
     &:focus {
@@ -909,7 +913,11 @@ textarea {
   }
 
   &__button {
-    min-width: 240px;
+    flex: 0 0 243px;
+
+    width: 243px;
+    min-width: 243px;
+    height: 60px;
     min-height: 60px;
 
     border: 0;
@@ -1057,10 +1065,8 @@ body.modal-open {
   .contact {
     &__inner {
       align-items: center;
-
       min-height: 0;
-
-      gap: 0px;
+      margin-top: 70;
     }
 
     &__prompt {
@@ -1073,28 +1079,34 @@ body.modal-open {
     }
 
     &__visual {
-      position: static;
+      position: relative;
 
       width: 100%;
       max-width: 650px;
+      height: 420px;
 
-      margin: 0;
+      margin: 25px auto 0;
 
-      display: flex;
-      justify-content: center;
+      pointer-events: none;
     }
 
     &__image {
-      width: 100%;
+      position: absolute;
 
-      margin: 0 auto;
+      left: 50%;
+      top: 50%;
+
+      width: 650px;
+      max-width: none;
+
+      transform: translate(-50%, -50%);
     }
 
     &__form {
       width: 100%;
       max-width: 700px;
 
-      margin: 0;
+      margin: 25px;
     }
   }
 }
@@ -1167,7 +1179,6 @@ body.modal-open {
         minmax(0, 1.1fr)
         minmax(0, 1fr);
 
-      // ВАЖНО:
       grid-template-rows: minmax(0, 1fr);
 
       gap: 12px;
@@ -1480,10 +1491,10 @@ body.modal-open {
 
   .contact {
     min-height: auto;
-    padding: 100px 0 80px;
+    padding: 70px 0 60px;
 
     &__inner {
-      margin-top: 70px;
+      margin-top: 60px;
     }
 
     &__prompt {
@@ -1496,26 +1507,46 @@ body.modal-open {
     }
 
     &__visual {
-      max-width: 380px;
+      height: 320px;
+      max-width: 520px;
+
+      margin-top: 20px;
     }
 
     &__image {
-      max-width: 380px;
-
-      margin: 0 auto;
+      width: 500px;
+      max-width: none;
     }
 
     &__form {
       flex-direction: column;
 
+      width: 100%;
       max-width: 520px;
+
+      margin-top: 20px;
 
       gap: 36px;
     }
 
-    &__input,
-    &__button {
+    &__input {
+      flex: none;
+
       width: 100%;
+      height: 58px;
+      min-height: 58px;
+    }
+
+    &__button {
+      flex: none;
+
+      width: 100%;
+      min-width: 0;
+
+      height: 58px;
+      min-height: 58px;
+
+      margin: 0;
     }
   }
 }
@@ -1829,34 +1860,80 @@ body.modal-open {
   }
 
   .contact {
-    padding: 70px 0 65px;
+    min-height: 692px;
+
+    padding: 31px 0 58px;
+
+    .container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+    }
 
     &__inner {
-      margin-top: 60px;
+      margin-top: 53px;
     }
 
     &__prompt {
+      width: 100%;
       max-width: 320px;
 
-      font-size: 21px;
-      line-height: 1.35;
+      margin: 0;
+
+      font-size: 17px;
+      font-weight: 800;
+      line-height: 25px;
+
+      text-align: center;
     }
 
     &__visual {
-      max-width: 280px;
+      position: relative;
+
+      width: 100%;
+      max-width: 320px;
+      height: 280px;
+
+      margin: 12px auto 0;
     }
 
     &__image {
-      max-width: 280px;
-      margin: 0 auto;
+      position: absolute;
+
+      left: 50%;
+      top: 50%;
+
+      width: 430px;
+      max-width: none;
+
+      margin: 0;
+
+      transform: translate(-50%, -50%);
     }
 
     &__form {
-      gap: 28px;
+      flex-direction: column;
+
+      width: 100%;
+      max-width: 320px;
+
+      margin-top: 19px;
+
+      gap: 40px;
     }
 
     &__input {
-      min-height: 58px;
+      flex: none;
+
+      width: 100%;
+
+      height: 50px;
+      min-height: 50px;
 
       padding: 0 24px;
 
@@ -1864,10 +1941,13 @@ body.modal-open {
     }
 
     &__button {
-      width: calc(100% - 32px);
+      flex: none;
 
+      width: 290px;
       min-width: 0;
-      min-height: 58px;
+
+      height: 50px;
+      min-height: 50px;
 
       margin: 0 auto;
     }
