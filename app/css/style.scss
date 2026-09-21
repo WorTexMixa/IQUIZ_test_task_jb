@@ -595,7 +595,7 @@ textarea {
     font-size: 16px;
     line-height: 24px;
 
-    color: &$text-color;
+    color: $text-color;
   }
 }
 
@@ -1047,12 +1047,6 @@ body.modal-open {
       display: none;
     }
   }
-
-  .benefits {
-    &__rocket {
-      display: none;
-    }
-  }
 }
 
 @media (max-width: 1440px) {
@@ -1433,35 +1427,33 @@ body.modal-open {
   }
 
   .quiz-card {
-    .quiz-card {
-      width: 286px;
-      height: 433px;
-      min-height: 0;
+    width: 286px;
+    height: 433px;
+    min-height: 0;
 
-      padding: 16px 16px 48px;
+    padding: 16px 16px 48px;
 
-      border-radius: 20px;
+    border-radius: 20px;
 
-      &__image {
-        width: 100%;
-        height: 162px;
+    &__image {
+      width: 100%;
+      height: 162px;
 
-        border-radius: 10px;
-      }
+      border-radius: 10px;
+    }
 
-      &__title {
-        margin-top: 15px;
+    &__title {
+      margin-top: 15px;
 
-        font-size: 14px;
-        line-height: 17px;
-      }
+      font-size: 14px;
+      line-height: 17px;
+    }
 
-      &__text {
-        margin-top: 25px;
+    &__text {
+      margin-top: 25px;
 
-        font-size: 12px;
-        line-height: 18px;
-      }
+      font-size: 12px;
+      line-height: 18px;
     }
   }
 
@@ -1720,7 +1712,7 @@ body.modal-open {
       line-height: 22px;
 
       p {
-        margin-bottom: 0 0 24px;
+        margin: 0 0 24px;
       }
 
       strong {

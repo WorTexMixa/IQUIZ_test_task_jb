@@ -406,7 +406,7 @@ textarea {
   margin: 25px 0 0;
   font-size: 16px;
   line-height: 24px;
-  color: .quiz-card__text #515151;
+  color: #515151;
 }
 
 .benefits {
@@ -716,9 +716,6 @@ body.modal-open {
   .how-it-works__decoration {
     display: none;
   }
-  .benefits__rocket {
-    display: none;
-  }
 }
 @media (max-width: 1440px) {
   .quiz-types__decoration {
@@ -973,24 +970,24 @@ body.modal-open {
     width: 286px;
     margin: 0 auto;
   }
-  .quiz-card .quiz-card {
+  .quiz-card {
     width: 286px;
     height: 433px;
     min-height: 0;
     padding: 16px 16px 48px;
     border-radius: 20px;
   }
-  .quiz-card .quiz-card__image {
+  .quiz-card__image {
     width: 100%;
     height: 162px;
     border-radius: 10px;
   }
-  .quiz-card .quiz-card__title {
+  .quiz-card__title {
     margin-top: 15px;
     font-size: 14px;
     line-height: 17px;
   }
-  .quiz-card .quiz-card__text {
+  .quiz-card__text {
     margin-top: 25px;
     font-size: 12px;
     line-height: 18px;
@@ -1173,7 +1170,7 @@ body.modal-open {
     line-height: 22px;
   }
   .how-it-works__text p {
-    margin-bottom: 0 0 24px;
+    margin: 0 0 24px;
   }
   .how-it-works__text strong {
     margin-top: 18px;
